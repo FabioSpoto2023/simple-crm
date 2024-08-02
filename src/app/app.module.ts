@@ -27,4 +27,4 @@ import { environment } from './environment';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
