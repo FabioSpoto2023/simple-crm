@@ -26,16 +26,13 @@ export class DialogAddUserComponent {
   birthDate = new Date();
   loading: boolean = false;
 
-  closeDialog() {
-    this.dialogRef.close();
-  }
-
   saveUser() {
     this.user.birthDate = this.birthDate.getTime();
     this.loading = true;
     this.saveToDatabase('users', this.user.toJSON())
     .then(() => {
       this.loading = false;
+      this.dialogRef.close();
     })
   }
 
