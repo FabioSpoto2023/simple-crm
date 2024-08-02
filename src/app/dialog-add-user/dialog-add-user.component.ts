@@ -34,6 +34,7 @@ export class DialogAddUserComponent {
 
   user = new User();
   birthDate = new Date();
+  
 
   closeDialog() {
     this.dialogRef.close();
