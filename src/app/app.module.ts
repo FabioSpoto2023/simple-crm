@@ -7,6 +7,7 @@ import { MaterialModule } from './material/material.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from './environment';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideFirebaseApp(() => initializeApp({"projectId":"simple-crm-8ff23","appId":"1:299734421815:web:a67c36cf319e424a1acab2","storageBucket":"simple-crm-8ff23.appspot.com","apiKey":"AIzaSyD96NMvSccjY7y2hyHlN5N795JMHR9RZDQ","authDomain":"simple-crm-8ff23.firebaseapp.com","messagingSenderId":"299734421815"})),
+    provideFirebaseApp(() => initializeApp(environment)),
     provideFirestore(() => getFirestore())
   ],
   bootstrap: [AppComponent]

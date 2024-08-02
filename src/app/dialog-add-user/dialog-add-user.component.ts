@@ -4,6 +4,8 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { User } from '../../models/user.class';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
+import { addDoc, collection, CollectionReference, doc, Firestore, setDoc } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -15,8 +17,10 @@ import { FormsModule } from '@angular/forms';
   providers: [provideNativeDateAdapter()]
 })
 export class DialogAddUserComponent {
-
   dialogRef = inject(MatDialogRef<DialogAddUserComponent>);
+
+
+  firestore: Firestore = inject(Firestore);
 
   user = new User();
   birthDate = new Date();
@@ -28,6 +32,9 @@ export class DialogAddUserComponent {
   saveUser() {
     this.user.birthDate = this.birthDate.getTime();
     console.log('User:', this.user);
+
+    addDoc(collection(this.firestore, 'users'), this.user.toJSON());
+
     this.closeDialog();
   }
 
