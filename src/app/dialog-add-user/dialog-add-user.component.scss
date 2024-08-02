@@ -1,0 +1,16 @@
+.dialog {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+    }
+}
+
+.one-row {
+    display: flex;
+    gap: 16px;
+}

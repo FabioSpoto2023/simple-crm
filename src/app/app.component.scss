@@ -1,0 +1,39 @@
+mat-drawer-container {
+    height: 100vh;
+}
+
+.sidenav {
+    width: 256px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        padding: 0 16px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.router-container {
+    padding: 64px;
+}
