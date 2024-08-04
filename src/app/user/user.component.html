@@ -9,18 +9,14 @@
             </tr>
         </thead>
         <tbody>
+            @for (user of users; track $index) {
             <tr>
-                <td>Fabio Spoto</td>
-                <td>Bergstraße 15</td>
-                <td>Hemmoor</td>
-                <td>21745</td>
+                <td>{{ $index }}. {{ user.firstName}} {{ user.lastName }}</td>
+                <td>{{ user.street }}</td>
+                <td>{{ user.city }}</td>
+                <td>{{ user.zipCode }}</td>
             </tr>
-            <tr>
-                <td>Fabio Spoto</td>
-                <td>Bergstraße 15</td>
-                <td>Hemmoor</td>
-                <td>21745</td>
-            </tr>
+            }
         </tbody>
     </table>
 </mat-card>
