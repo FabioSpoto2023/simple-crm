@@ -3,6 +3,7 @@
 }
 
 .sidenav {
+    width: 288px;
     height: 100vh;
     font-size: 16px;
     box-shadow: 1px 0 5px -2px #888;
@@ -12,7 +13,6 @@
 }
 
 .sidenav-header {
-    width: 288px;
     display: flex;
     flex-direction: column;
 }
@@ -63,6 +63,10 @@
             background-color: #EFF6FF;
             border-radius: 4px;
             color: #2D68FE;
+
+            .item-text {
+                color: #2D68FE;
+            }
         }
 
         &:hover:nth-child(1) {
@@ -122,5 +126,71 @@
     .profile-email {
         font-size: 14px;
         color: #71839B;
+    }
+}
+
+@media (max-width: 1024px) {
+    .sidenav {
+        width: 64px;
+    }
+
+    .logo {
+        height: unset;
+        width: 32px;
+        display: block;
+        padding: 0;
+        margin: 0;
+        margin-left: 16px;
+        margin-top: 16px;
+
+        img {
+            height: unset;
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .menu-items {
+        li:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        li {
+            padding-left: 0;
+            margin: 0;
+            width: 28px;
+            height: 28px;
+            padding: 4px;
+            margin-left: 12px;
+
+            .icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            .item-text {
+                display: none;
+            }
+
+            &:hover {
+                border-radius: 100%;
+            }
+        }
+    }
+
+    .profile {
+        margin-left: 4px !important;
+
+        .profile-container {
+            display: none;
+        }
+    }
+
+    .router-container {
+        padding: 0;
     }
 }
