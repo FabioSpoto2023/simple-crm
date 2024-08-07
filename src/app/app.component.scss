@@ -1,9 +1,17 @@
-mat-drawer-container {
-    height: 100vh;
-    font-size: 16px;
+.container {
+    display: flex;
 }
 
 .sidenav {
+    height: 100vh;
+    font-size: 16px;
+    box-shadow: 1px 0 5px -2px #888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidenav-header {
     width: 288px;
     display: flex;
     flex-direction: column;
@@ -14,12 +22,14 @@ mat-drawer-container {
 }
 
 .logo {
-    height: 64px;
+    height: 48px;
     display: flex;
     align-items: center;
     text-decoration: none;
     gap: 16px;
-    margin-left: 20px;
+    margin: 20px;
+    margin-bottom: 0;
+    padding-left: 8px;
 
     .logo-text {
         font-size: 24px;
@@ -35,7 +45,10 @@ mat-drawer-container {
 .menu-items {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px;
+
+    li:not(:last-child) {
+        margin-bottom: 12px;
+    }
 
     li {
         padding-left: 12px;
@@ -45,7 +58,6 @@ mat-drawer-container {
         align-items: center;
         gap: 16px;
         cursor: pointer;
-        margin-top: 12px;
 
         &:hover {
             background-color: #EFF6FF;
@@ -64,9 +76,51 @@ mat-drawer-container {
                 content: url('/assets/icon/clients_hover.svg');
             }
         }
+
+        &:hover:nth-child(3) {
+            .icon {
+                content: url('/assets/icon/settings_hover.svg');
+            }
+        }
+
+    }
+}
+
+.menu-items-bottom {
+    li {
+        &:hover:nth-child(1) {
+            .icon {
+                content: url('/assets/icon/logout_hover.svg');
+            }
+        }
     }
 }
 
 .router-container {
     padding: 64px;
+}
+
+.profile {
+    padding: 20px 0;
+
+    &:hover {
+        background-color: unset !important;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border: solid 1px #71839B;
+        border-radius: 100%;
+        padding: 2px;
+    }
+
+    .profile-name {
+        color: #324054;
+    }
+
+    .profile-email {
+        font-size: 14px;
+        color: #71839B;
+    }
 }

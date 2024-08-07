@@ -1,30 +1,30 @@
-<mat-drawer-container autosize>
-	<mat-drawer #drawer mode="side" [opened]="true">
-		<div class="sidenav">
+<div class="container">
+	<div class="sidenav">
+		<div class="sidenav-header">
 			<a class="logo" href="/">
 				<img class="logo-img" src="/assets/icon/logo.svg">
 				<div class="logo-text">SIMPLE CRM</div>
 			</a>
+			<ul class="menu-items">
+				<li [routerLink]="['/']"><img class="icon" src="/assets/icon/dashboard.svg">Dashboard</li>
+				<li [routerLink]="['/user']"><img class="icon" src="/assets/icon/clients.svg">Clients</li>
+				<li [routerLink]="['/user']"><img class="icon" src="/assets/icon/settings.svg">Settings</li>
+			</ul>
 		</div>
-		<ul class="menu-items">
-			<li [routerLink]="['/']"><img class="icon" src="/assets/icon/dashboard.svg">Dashboard</li>
-			<li [routerLink]="['/user']"><img class="icon" src="/assets/icon/clients.svg">Clients</li>
-		</ul>
-	</mat-drawer>
 
-	<div>
-		<mat-toolbar color="primary">
-			<mat-toolbar-row>
-				<button mat-icon-button (click)="drawer.toggle()">
-					<mat-icon>menu</mat-icon>
-				</button>
-				<span>Simple CRM</span>
-			</mat-toolbar-row>
-		</mat-toolbar>
+		<ul class="menu-items menu-items-bottom">
+			<li [routerLink]="['/user']"><img class="icon" src="/assets/icon/logout.svg">Logout</li>
+			<li class="profile">
+				<img class="avatar" src="/assets/img/avatar.png">
+				<div class="profile-container">
+					<div class="profile-name">Fabio Spoto</div>
+					<div class="profile-email">fspoto98&#64;gmail.com</div>
+				</div>
+			</li>
+		</ul>
 	</div>
 
 	<div class="router-container">
 		<router-outlet></router-outlet>
 	</div>
-
-</mat-drawer-container>
+</div>
