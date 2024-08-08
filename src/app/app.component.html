@@ -7,13 +7,13 @@
 			</a>
 			<ul class="menu-items">
 				<li [routerLink]="['/']" (click)="sideNavSelect('dashboard')" id="sidenav-dashboard"><img class="icon" src="/assets/icon/dashboard.svg"><div class="item-text">Dashboard</div></li>
-				<li [routerLink]="['/user']" (click)="sideNavSelect('clients')" id="sidenav-clients"><img class="icon" src="/assets/icon/clients.svg"><div class="item-text">Clients</div></li>
-				<li [routerLink]="['/user']" (click)="sideNavSelect('settings')" id="sidenav-settings"><img class="icon" src="/assets/icon/settings.svg"><div class="item-text">Settings</div></li>
+				<li [routerLink]="['/clients']" (click)="sideNavSelect('clients')" id="sidenav-clients"><img class="icon" src="/assets/icon/clients.svg"><div class="item-text">Clients</div></li>
+				<li [routerLink]="['/clients']" (click)="sideNavSelect('settings')" id="sidenav-settings"><img class="icon" src="/assets/icon/settings.svg"><div class="item-text">Settings</div></li>
 			</ul>
 		</div>
 
 		<ul class="menu-items">
-			<li [routerLink]="['/user']" (click)="sideNavSelect('logout')" id="sidenav-logout"><img class="icon" src="/assets/icon/logout.svg"><div class="item-text">Logout</div></li>
+			<li [routerLink]="['/clients']" (click)="sideNavSelect('logout')" id="sidenav-logout"><img class="icon" src="/assets/icon/logout.svg"><div class="item-text">Logout</div></li>
 			<li class="profile">
 				<img class="avatar" src="/assets/img/avatar.png">
 				<div class="profile-container">

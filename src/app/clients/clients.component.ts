@@ -2,26 +2,27 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { MaterialModule } from '../material/material.module';
-import { collection, Firestore, limit, onSnapshot, orderBy, query } from '@angular/fire/firestore';
+import { collection, Firestore, onSnapshot, orderBy, query } from '@angular/fire/firestore';
 import { CommonModule, NgFor } from '@angular/common';
 
+
 @Component({
-  selector: 'app-user',
+  selector: 'app-clients',
+  templateUrl: './clients.component.html',
+  styleUrl: './clients.component.scss',
   standalone: true,
   imports: [MaterialModule, NgFor, CommonModule],
-  templateUrl: './user.component.html',
-  styleUrl: './user.component.scss'
 })
-export class UserComponent implements OnDestroy {
 
+
+export class ClientsComponent implements OnInit, OnDestroy {
   firestore = inject(Firestore);
   dialog = inject(MatDialog);
   users: any = [];
 
   unsubUsers: any;
 
-
-  constructor() {
+  ngOnInit(): void {
     const q = query(collection(this.firestore, 'users'), orderBy('firstName', 'desc'));
     this.unsubUsers = onSnapshot(q, (elements) => {
       this.users = [];
@@ -40,5 +41,4 @@ export class UserComponent implements OnDestroy {
       autoFocus: false
     });
   }
-
 }
