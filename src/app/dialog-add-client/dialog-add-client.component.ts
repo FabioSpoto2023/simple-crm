@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { provideNativeDateAdapter } from '@angular/material/core';
-import { User } from '../../models/user.class';
+import { Client } from '../../models/client.class';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
 
@@ -22,7 +22,7 @@ export class DialogAddClientComponent {
 
   firestore: Firestore = inject(Firestore);
 
-  user = new User();
+  user = new Client();
   birthDate = new Date();
   loading: boolean = false;
 
