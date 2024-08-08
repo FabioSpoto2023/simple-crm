@@ -2,6 +2,35 @@
     display: flex;
 }
 
+[class*="select-"] {
+    background-color: #EFF6FF !important;
+    color: #2D68FE;
+}
+
+.select-dashboard {
+    img {
+        content: url('/assets/icon/dashboard_select.svg');
+    }
+}
+
+.select-clients {
+    img {
+        content: url('/assets/icon/clients_select.svg');
+    }
+}
+
+.select-logout {
+    img {
+        content: url('/assets/icon/logout_select.svg');
+    }
+}
+
+.select-settings {
+    img {
+        content: url('/assets/icon/settings_select.svg');
+    }
+}
+
 .sidenav {
     width: 288px;
     height: 100vh;
@@ -170,5 +199,9 @@
 
     .router-container {
         padding: 0;
+    }
+
+    [class*="select-"] {
+        border-radius: 100%;
     }
 }
