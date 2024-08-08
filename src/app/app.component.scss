@@ -60,43 +60,10 @@
         cursor: pointer;
 
         &:hover {
-            background-color: #EFF6FF;
+            background-color: #F1F5F9;
             border-radius: 4px;
-            color: #2D68FE;
-
-            .item-text {
-                color: #2D68FE;
-            }
         }
 
-        &:hover:nth-child(1) {
-            .icon {
-                content: url('/assets/icon/dashboard_hover.svg');
-            }
-        }
-
-        &:hover:nth-child(2) {
-            .icon {
-                content: url('/assets/icon/clients_hover.svg');
-            }
-        }
-
-        &:hover:nth-child(3) {
-            .icon {
-                content: url('/assets/icon/settings_hover.svg');
-            }
-        }
-
-    }
-}
-
-.menu-items-bottom {
-    li {
-        &:hover:nth-child(1) {
-            .icon {
-                content: url('/assets/icon/logout_hover.svg');
-            }
-        }
     }
 }
 
@@ -105,10 +72,21 @@
 }
 
 .profile {
-    padding: 20px 0;
+    margin: 20px;
+    padding: 12px 0;
+    height: 64px;
+
+    display: flex;
+    gap: 12px;
 
     &:hover {
         background-color: unset !important;
+    }
+
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
     }
 
     .avatar {
