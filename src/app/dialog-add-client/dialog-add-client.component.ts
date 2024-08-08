@@ -10,15 +10,15 @@ import { CommonModule } from '@angular/common';
 
 
 @Component({
-  selector: 'app-dialog-add-user',
-  standalone: true,
+  selector: 'app-dialog-add-client',
+  templateUrl: './dialog-add-client.component.html',
+  styleUrl: './dialog-add-client.component.scss',
   imports: [MaterialModule, FormsModule, CommonModule],
-  templateUrl: './dialog-add-user.component.html',
-  styleUrl: './dialog-add-user.component.scss',
-  providers: [provideNativeDateAdapter()]
+  providers: [provideNativeDateAdapter()],
+  standalone: true
 })
-export class DialogAddUserComponent {
-  dialogRef = inject(MatDialogRef<DialogAddUserComponent>);
+export class DialogAddClientComponent {
+  dialogRef = inject(MatDialogRef<DialogAddClientComponent>);
 
   firestore: Firestore = inject(Firestore);
 
@@ -30,14 +30,13 @@ export class DialogAddUserComponent {
     this.user.birthDate = this.birthDate.getTime();
     this.loading = true;
     this.saveToDatabase('users', this.user.toJSON())
-    .then(() => {
-      this.loading = false;
-      this.dialogRef.close();
-    })
+      .then(() => {
+        this.loading = false;
+        this.dialogRef.close();
+      })
   }
 
   saveToDatabase(collectionName: string, json: any) {
     return addDoc(collection(this.firestore, collectionName), json);
   }
-
 }

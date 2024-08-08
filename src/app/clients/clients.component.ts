@@ -1,9 +1,9 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { MaterialModule } from '../material/material.module';
 import { collection, Firestore, onSnapshot, orderBy, query } from '@angular/fire/firestore';
 import { CommonModule, NgFor } from '@angular/common';
+import { DialogAddClientComponent } from '../dialog-add-client/dialog-add-client.component';
 
 
 @Component({
@@ -37,7 +37,7 @@ export class ClientsComponent implements OnInit, OnDestroy {
   }
 
   openDialog() {
-    this.dialog.open(DialogAddUserComponent, {
+    this.dialog.open(DialogAddClientComponent, {
       autoFocus: false
     });
   }

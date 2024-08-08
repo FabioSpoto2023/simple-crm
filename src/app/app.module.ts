@@ -9,6 +9,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from './environment';
 import { ClientsComponent } from './clients/clients.component';
+import { DialogAddClientComponent } from './dialog-add-client/dialog-add-client.component';
 
 
 @NgModule({
