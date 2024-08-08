@@ -10,11 +10,13 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from './environment';
 import { ClientsComponent } from './clients/clients.component';
 import { DialogAddClientComponent } from './dialog-add-client/dialog-add-client.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClientsComponent } from './clients/clients.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'clients', component: ClientsComponent }
+  { path: 'clients', component: ClientsComponent },
+  { path: 'settings', component: SettingsComponent }
 ];
 
 @NgModule({
