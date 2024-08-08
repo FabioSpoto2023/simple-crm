@@ -1,4 +1,8 @@
 .container {
+    height: calc(100vh - 128px);
+    border-radius: 4px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
     table {
         text-wrap: nowrap;
         width: 100%;
@@ -24,19 +28,19 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 824px) {
     td:nth-child(n+5) {
         display: none;
     }
 }
 
-@media (max-width: 667px) {
+@media (max-width: 724px) {
     td:nth-child(n+4) {
         display: none;
     }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 624px) {
     td:nth-child(n+3) {
         display: none;
     }
