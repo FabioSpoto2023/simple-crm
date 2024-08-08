@@ -1,0 +1,43 @@
+.container {
+    table {
+        text-wrap: nowrap;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 0 16px;
+    }
+
+    thead tr td {
+        font-weight: 600;
+        height: 48px;
+    }
+
+    tbody tr td {
+        width: 120px;
+        height: 64px;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #F1F5F9;
+    }
+}
+
+@media (max-width: 767px) {
+    td:nth-child(n+5) {
+        display: none;
+    }
+}
+
+@media (max-width: 667px) {
+    td:nth-child(n+4) {
+        display: none;
+    }
+}
+
+@media (max-width: 567px) {
+    td:nth-child(n+3) {
+        display: none;
+    }
+}
