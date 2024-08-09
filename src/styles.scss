@@ -25,19 +25,18 @@ body {
   }
   
   *::-webkit-scrollbar {
+    width: var(--sb-size);
     height: var(--sb-size);
   }
   
   *::-webkit-scrollbar-track {
     background: var(--sb-track-color);
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-radius:  8px;
   }
   
   *::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-radius:  8px;
   }
   
   @supports not selector(::-webkit-scrollbar) {
