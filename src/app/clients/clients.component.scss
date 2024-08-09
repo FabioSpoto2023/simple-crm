@@ -2,6 +2,7 @@
     height: calc(100dvh - 128px);
     border-radius: 4px;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    overflow-x: auto;
 
     table {
         text-wrap: nowrap;
@@ -16,6 +17,8 @@
     thead tr td {
         font-weight: 600;
         height: 48px;
+        background-color: #2D68FE;
+        color: white;
     }
 
     tbody tr td {
@@ -23,31 +26,13 @@
         height: 64px;
     }
 
-    tbody tr:nth-child(odd) {
-        background-color: #F1F5F9;
+    tbody tr:nth-child(even) {
+        background-color: #EFF6FF;
     }
 }
 
 @media (max-width: 1118px) {
     .container {
         height: calc(100dvh - 64px);
-    }
-}
-
-@media (max-width: 824px) {
-    td:nth-child(n+5) {
-        display: none;
-    }
-}
-
-@media (max-width: 724px) {
-    td:nth-child(n+4) {
-        display: none;
-    }
-}
-
-@media (max-width: 624px) {
-    td:nth-child(n+3) {
-        display: none;
     }
 }
