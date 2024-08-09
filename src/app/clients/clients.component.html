@@ -4,9 +4,9 @@
         <input type="text" placeholder="Search..." [matAutocomplete]="auto">
     </div>
     <mat-autocomplete #auto="matAutocomplete">
-          <mat-option [value]="'Fabio Spoto'">Fabio Spoto</mat-option>
-      </mat-autocomplete>
-    <button mat-flat-button class="btn-add-client"><mat-icon>add</mat-icon>Add Client</button>
+        <mat-option [value]="'Fabio Spoto'">Fabio Spoto</mat-option>
+    </mat-autocomplete>
+    <button mat-flat-button class="btn-add-client" (click)="openDialog()"><mat-icon>add</mat-icon>Add Client</button>
 </div>
 
 <div class="clients">

@@ -40,7 +40,8 @@
     </div>
 
     <div class="actions">
-        <button (click)="dialogRef.close()" [disabled]="loading" mat-button>Cancel</button>
-        <button (click)="saveUser()" [disabled]="loading" mat-button>Save</button>
+        <button mat-flat-button class="btn-cancel" [disabled]="loading" (click)="dialogRef.close()"><mat-icon>cancel</mat-icon>Cancel</button>
+        <button mat-flat-button class="btn-add" [disabled]="loading" (click)="saveUser()"><mat-icon>save</mat-icon>Save</button>
+        
     </div>
 </div>

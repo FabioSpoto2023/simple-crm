@@ -14,6 +14,22 @@
         display: flex;
         justify-content: space-between;
         gap: 32px;
+
+        .btn-add {
+            background-color: #2D68FE;
+            color: white;
+            border-radius: 8px;
+            height: 32px;
+            width: 120px;
+        }
+
+        .btn-cancel {
+            background-color: #71839B;
+            color: white;
+            border-radius: 8px;
+            width: 120px;
+            height: 32px;
+        }
     }
 }
 
