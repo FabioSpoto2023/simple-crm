@@ -135,7 +135,7 @@
 .router-container {
     width: 100%;
     padding: 64px;
-    height: 100%;
+    height: calc(100dvh - 128px);
     overflow: hidden;
     overflow-y: auto;
 }
@@ -210,6 +210,7 @@
     }
 
     .router-container {
+        height: calc(100dvh - 32px);
         padding: 16px;
     }
 }
