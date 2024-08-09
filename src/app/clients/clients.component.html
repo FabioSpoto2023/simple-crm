@@ -1,8 +1,11 @@
 <div class="menu">
     <div class="input-field">
         <mat-icon>search</mat-icon>
-        <input type="text" placeholder="Search...">
+        <input type="text" placeholder="Search..." [matAutocomplete]="auto">
     </div>
+    <mat-autocomplete #auto="matAutocomplete">
+          <mat-option [value]="'Fabio Spoto'">Fabio Spoto</mat-option>
+      </mat-autocomplete>
     <button mat-flat-button class="btn-add-client"><mat-icon>add</mat-icon>Add Client</button>
 </div>
 
