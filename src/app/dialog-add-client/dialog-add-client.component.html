@@ -6,12 +6,43 @@
     <div class="one-row">
         <mat-form-field>
             <mat-label>First Name</mat-label>
-            <input [(ngModel)]="user.firstName" [disabled]="loading" matInput placeholder="First Name">
+            <input [(ngModel)]="user.firstName" [disabled]="loading" matInput placeholder="First Name" required="">
         </mat-form-field>
-    
+
         <mat-form-field>
             <mat-label>Last Name</mat-label>
-            <input [(ngModel)]="user.lastName" [disabled]="loading" matInput placeholder="Last Name">
+            <input [(ngModel)]="user.lastName" [disabled]="loading" matInput placeholder="Last Name" required="">
+        </mat-form-field>
+    </div>
+
+    <mat-form-field>
+        <mat-label>Company</mat-label>
+        <input [(ngModel)]="user.company" [disabled]="loading" matInput placeholder="Company">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input [(ngModel)]="user.email" [disabled]="loading" matInput placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input [(ngModel)]="user.phone" [disabled]="loading" matInput placeholder="Phone">
+    </mat-form-field>
+
+    <div class="one-row">
+        <mat-form-field>
+            <mat-label>Country</mat-label>
+            <input [(ngModel)]="user.country" [disabled]="loading" matInput placeholder="Country">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Status</mat-label>
+            <mat-select [(ngModel)]="user.status">
+                @for (status of statusList; track $index) {
+                <mat-option [value]="status">{{ status.viewValue }}</mat-option>
+                }
+            </mat-select>
         </mat-form-field>
     </div>
 
@@ -32,7 +63,7 @@
             <mat-label>Zip Code</mat-label>
             <input [(ngModel)]="user.zipCode" [disabled]="loading" matInput placeholder="Zip Code">
         </mat-form-field>
-    
+
         <mat-form-field>
             <mat-label>City</mat-label>
             <input [(ngModel)]="user.city" [disabled]="loading" matInput placeholder="City">
@@ -40,8 +71,10 @@
     </div>
 
     <div class="actions">
-        <button mat-flat-button class="btn-cancel" [disabled]="loading" (click)="dialogRef.close()"><mat-icon>cancel</mat-icon>Cancel</button>
-        <button mat-flat-button class="btn-add" [disabled]="loading" (click)="saveUser()"><mat-icon>save</mat-icon>Save</button>
-        
+        <button mat-flat-button class="btn-cancel" [disabled]="loading"
+            (click)="dialogRef.close()"><mat-icon>cancel</mat-icon>Cancel</button>
+        <button mat-flat-button class="btn-add" [disabled]="loading"
+            (click)="saveUser()"><mat-icon>save</mat-icon>Save</button>
+
     </div>
 </div>

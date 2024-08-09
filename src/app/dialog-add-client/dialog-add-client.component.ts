@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { addDoc, collection, Firestore } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
 
+import { Status } from '../../interfaces/status.interface';
+import { stat } from 'fs';
+
 
 @Component({
   selector: 'app-dialog-add-client',
@@ -25,6 +28,19 @@ export class DialogAddClientComponent {
   user = new Client();
   birthDate = new Date();
   loading: boolean = false;
+
+  statusList: Status[] = [
+    { value: 'lead', viewValue: 'Lead' },
+    { value: 'replied', viewValue: 'Replied' },
+    { value: 'opportunity', viewValue: 'Opportunity' },
+    { value: 'quotation', viewValue: 'Quotation' },
+    { value: 'lost_quotation', viewValue: 'Lost Quotation' },
+    { value: 'converted', viewValue: 'Converted' }
+  ];
+
+  constructor() {
+    this.user.status = this.statusList[0];
+  }
 
   saveUser() {
     this.user.birthDate = this.birthDate.getTime();
