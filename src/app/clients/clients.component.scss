@@ -83,3 +83,18 @@
         height: calc(100dvh - 32px);
     }
 }
+
+@media (max-width: 524px) {
+    .menu {
+        flex-direction: column;
+        gap: 16px;
+
+        .input-field {
+            width: 100%;
+        }
+
+        .btn-add-client {
+            width: 100%;
+        }
+    }
+}
